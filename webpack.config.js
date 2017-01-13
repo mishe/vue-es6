@@ -45,7 +45,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.common.js',
+      'vueRouter$': 'vue-router/dist/vue-router.common.js'
     }
   },
   devServer: {
@@ -56,7 +57,8 @@ module.exports = {
     hints: false
   },
   plugins: [
-    CssFile
+    CssFile,
+    new webpack.HotModuleReplacementPlugin()
   ],
   devtool: '#eval-source-map'
 }
