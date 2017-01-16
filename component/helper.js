@@ -55,7 +55,7 @@
             type=options.type||'get',
             url=options.url,
             success=options.success||function(){},
-            apiRoot='https://app.91yaowang.com/app/webservice/v2/';
+            apiRoot='/app/webservice/v2/';
 
         console.log(toParam(data))
 
