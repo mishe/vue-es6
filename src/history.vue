@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 v-tap="{methods:msgg}">{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
     <router-link to="detail">Go to detail</router-link>
   </div>
 </template>
@@ -10,11 +10,6 @@ export default {
     return {
       msg: 'test msg',
 
-    }
-  },
-  methods:{
-    msgg:function(){
-        console.log('msg')
     }
   }
 }

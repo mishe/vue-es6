@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vueRouter'
+import VueTap from 'v-tap'
 import Home from './home.vue'
-import Detail from './detail.vue'
+import LandPage from './landPage.vue'
+import History from './history.vue'
 
 Vue.use(VueRouter)
+Vue.use(VueTap)
 
 const routes = [
-  { path: '/home', component: Home },
-  { path: '/detail', component: Detail }
+  { path: '/', component: Home },
+  { path: '/landPage/:lid', component: LandPage },
+  { path: '/history/:hid', component: History }
 ]
 
 const router = new VueRouter({
