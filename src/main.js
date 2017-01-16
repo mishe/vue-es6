@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vueRouter'
 import VueTap from 'v-tap'
+import fetch from 'whatwg-fetch'
+
+require('../component/helper');
+
 import Home from './home.vue'
 import LandPage from './landPage.vue'
 import History from './history.vue'
