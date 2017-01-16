@@ -6,17 +6,40 @@
 </template>
 <script>
 export default {
-  data () {
-    return {
-      msg: 'test msg',
+    created (){
+        this.getData()
+    },
+    data () {
+        return {
+          msg: 'test msg',
 
+        }
+    },
+    methods:{
+        msgg(){
+            console.log('msg')
+        },
+        getData(){
+
+
+            sync({
+                url:'newProductList',
+                type:'POST',
+                data:{
+                    currentPage:0,
+                    pageCount:15,
+                    productType:4,
+                    channelCode:''
+                },
+                success(d){
+                    console.log(d);
+                },
+                error(d){
+                    console.log(d);
+                }
+            })
+        }
     }
-  },
-  methods:{
-    msgg:function(){
-        console.log('msg')
-    }
-  }
 }
 
 </script>
